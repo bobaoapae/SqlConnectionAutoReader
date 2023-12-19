@@ -1,0 +1,8 @@
+﻿{
+  "profiles": {
+    "SqlConnectionAutoReader.Generator": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\SqlConnectionAutoReader.Test\\SqlConnectionAutoReader.Test.csproj"
+    }
+  }
+}
