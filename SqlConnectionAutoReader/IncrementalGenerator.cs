@@ -115,8 +115,13 @@ public class IncrementalGenerator : IIncrementalGenerator
             }
 
             writer.Indent--;
+            writer.WriteLine();
             writer.WriteLine("};");
             writer.WriteLine();
+            writer.WriteLine("if(spResult.ResultType == SpResultType.SP_ERROR)");
+            writer.Indent++;
+            writer.WriteLine("return spResult;");
+            writer.Indent--;
             writer.WriteLine("if(!await reader.NextResultAsync())");
             writer.Indent++;
             writer.WriteLine("throw new System.Exception(\"Can't read procedure result set\");");
